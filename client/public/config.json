@@ -1,0 +1,23 @@
+{
+  "agent": {
+    "name": "Steven",
+    "company": "RE/MAX GALAXY",
+    "license": "DRE# 02169359",
+    "phone": "909-616-8252",
+    "email": "wjin0891@gmail.com",
+    "wechat": "stevenhomepage",
+    "wechatQR": "/assets/images/wechat-qr.jpg"
+  },
+  "website": {
+    "title": "宝爸Steven | 洛杉矶商业地产专家",
+    "description": "洛杉矶商业地产专业顾问，持证经纪人 DRE# 02169359。专注于生意转让、仓库租赁、办公商铺投资。深耕南加州，为您提供一站式商业地产解决方案。",
+    "keywords": "洛杉矶商业地产,生意转让,仓库租赁,商业地产投资,RE/MAX,Steven",
+    "baseURL": "https://baobasteven-site.vercel.app"
+  },
+  "github": {
+    "owner": "baobasteven",
+    "repo": "baobasteven-site",
+    "branch": "main",
+    "rawContentURL": "https://raw.githubusercontent.com/baobasteven/baobasteven-site/main"
+  }
+}
