@@ -98,7 +98,7 @@ export default function About() {
                   <Award className="w-10 h-10 text-primary mx-auto" />
                   <h3 className="font-bold text-lg">专业认证</h3>
                   <p className="text-sm text-muted-foreground">
-                    加州持牌房地产经纪人 (DRE# 01234567)，RE/MAX GALAXY 资深顾问。
+                    加州持牌房地产经纪人 (DRE# 02169359)，RE/MAX GALAXY 资深顾问。
                   </p>
                 </CardContent>
               </Card>
