@@ -50,7 +50,7 @@ export default function Contact() {
                 直接致电 Steven，获取最及时的市场信息和专业建议。
               </p>
               <a href="tel:6261234567" className="block text-xl font-bold text-primary hover:underline">
-                (626) 123-4567
+                (909) 616-8252
               </a>
             </CardContent>
           </Card>
@@ -64,8 +64,8 @@ export default function Contact() {
               <p className="text-muted-foreground">
                 发送您的需求详情，我们将在 24 小时内回复您。
               </p>
-              <a href="mailto:steven@remax-galaxy.com" className="block text-lg font-bold text-primary hover:underline break-all">
-                steven@remax-galaxy.com
+              <a href="mailto:wjin0891@gmail.com" className="block text-lg font-bold text-primary hover:underline break-all">
+                wjin0891@gmail.com
               </a>
             </CardContent>
           </Card>
