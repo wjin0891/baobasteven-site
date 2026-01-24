@@ -22,9 +22,9 @@ export default function ListingDetail() {
   useEffect(() => {
     if (!params?.id) return;
 
-    fetch('/shared/listings.json')
+    fetch('/listings.json')
       .then(res => {
-        if (!res.ok) return import('../../../shared/listings.json').then(m => m.default);
+        if (!res.ok) throw new Error('Failed to fetch listings');
         return res.json();
       })
       .then(data => {

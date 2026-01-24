@@ -9,18 +9,12 @@ export default function Home() {
   const [featuredListings, setFeaturedListings] = useState<Listing[]>([]);
 
   useEffect(() => {
-    // In a real app, we would fetch this from an API
-    // For now, we'll import the JSON directly or fetch it from the public folder
-    fetch('/shared/listings.json')
+    fetch('/listings.json')
       .then(res => {
-        if (!res.ok) {
-          // Fallback to importing directly if fetch fails (dev environment)
-          return import('../../../shared/listings.json').then(m => m.default);
-        }
+        if (!res.ok) throw new Error('Failed to fetch listings');
         return res.json();
       })
       .then(data => {
-        // Select 3 random listings for the homepage
         setFeaturedListings(data.slice(0, 3));
       })
       .catch(err => console.error("Failed to load listings", err));
