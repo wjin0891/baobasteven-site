@@ -3,12 +3,13 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
-import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Send, X } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 
 export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showWechatQr, setShowWechatQr] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -149,9 +150,29 @@ export default function Contact() {
                 周一至周日：9:00 AM - 6:00 PM<br />
                 (其他时间请提前预约)
               </p>
-              <Button variant="secondary" className="font-semibold">
-                添加微信咨询
-              </Button>
+              
+              {!showWechatQr ? (
+                <Button variant="secondary" className="font-semibold" onClick={() => setShowWechatQr(true)}>
+                  添加微信咨询
+                </Button>
+              ) : (
+                <div className="space-y-4 w-full max-w-xs">
+                  <div className="flex justify-between items-center mb-2">
+                    <h4 className="font-bold text-lg">扫码添加微信</h4>
+                    <Button variant="ghost" size="sm" className="h-8 w-8 p-0" onClick={() => setShowWechatQr(false)}>
+                      <X className="w-4 h-4" />
+                    </Button>
+                  </div>
+                  <div className="bg-white p-2 rounded-lg shadow-lg">
+                    <img 
+                      src="/assets/images/wechat-qr.jpg" 
+                      alt="WeChat QR Code" 
+                      className="w-full rounded"
+                    />
+                  </div>
+                  <p className="text-sm opacity-80">微信ID: steven_la_realestate</p>
+                </div>
+              )}
             </div>
           </div>
         </div>
