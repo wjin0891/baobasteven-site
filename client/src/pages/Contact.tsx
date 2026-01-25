@@ -170,7 +170,7 @@ export default function Contact() {
                       className="w-full rounded"
                     />
                   </div>
-                  <p className="text-sm opacity-80">微信ID: steven_la_realestate</p>
+                  <p className="text-sm opacity-80">微信ID: stevenhomepage</p>
                 </div>
               )}
             </div>
