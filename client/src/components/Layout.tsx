@@ -162,15 +162,15 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <ul className="space-y-4 text-sm text-primary-foreground/80">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 shrink-0 mt-0.5 opacity-70" />
-                <span>Rowland Heights / Chino Hills<br />Los Angeles, CA</span>
+                <span>1411 S Diamond Bar Blvd, Diamond Bar, CA 91765</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 shrink-0 opacity-70" />
-                <span>(626) 123-4567</span>
+                <span>909-616-8252</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 shrink-0 opacity-70" />
-                <span>steven@remax-galaxy.com</span>
+                <span>wjin0891@gmail.com</span>
               </li>
             </ul>
           </div>
