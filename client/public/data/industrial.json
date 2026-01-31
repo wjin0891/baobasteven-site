@@ -1,0 +1,42 @@
+[
+  {
+    "id": "industrial-001",
+    "title": "Ontario 50,000呎高仓出租",
+    "type": "lease",
+    "price": "$0.85/呎/月",
+    "size": "50,000 呎",
+    "location": "Ontario, CA",
+    "images": [
+      "/assets/images/listings/industrial/industrial-001-1.jpg",
+      "/assets/images/listings/industrial/industrial-001-2.jpg"
+    ],
+    "features": [
+      "32呎净高",
+      "10个卸货平台",
+      "ESFR消防系统",
+      "充足停车位",
+      "靠近10号高速公路"
+    ],
+    "description": "位于Ontario物流核心区，靠近10号和15号高速公路，交通便利。32呎净高适合重型货架和高位叉车操作，配备ESFR消防系统满足保险要求，10个卸货平台支持多车辆同时装卸。"
+  },
+  {
+    "id": "industrial-002",
+    "title": "City of Industry 120,000呎仓库出售",
+    "type": "sale",
+    "price": "$12,500,000",
+    "size": "120,000 呎",
+    "location": "City of Industry, CA",
+    "images": [
+      "/assets/images/listings/industrial/industrial-002-1.jpg",
+      "/assets/images/listings/industrial/industrial-002-2.jpg"
+    ],
+    "features": [
+      "净占地2.8英亩",
+      "28呎净高",
+      "8个卸货平台",
+      "带现成办公室",
+      "长期租客稳定回报"
+    ],
+    "description": "位于工业核心区域的优质投资物业，占地2.8英亩，建筑120,000呎。目前由知名物流企业承租，剩余租期5年，年回报率约5.2%。适合寻求稳定现金流的投资人。"
+  }
+]
