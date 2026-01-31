@@ -24,7 +24,7 @@ interface ListingCardProps {
 export default function ListingCard({ listing, className }: ListingCardProps) {
   // Use the first image or a placeholder
   const coverImage = listing.images && listing.images.length > 0 
-    ? `/assets/images/${listing.images[0]}` 
+    ? listing.images[0] 
     : "/images/business-cover.jpg";
 
   return (
