@@ -1,0 +1,24 @@
+[
+  {
+    "id": "business-001",
+    "title": "露营地餐厅转让",
+    "type": "sale",
+    "price": "$128,000",
+    "size": "3,500 呎",
+    "location": "Los Angeles County, CA",
+    "images": [
+      "/assets/images/listings/business/business-camping-restaurant-1.jpg",
+      "/assets/images/listings/business/business-camping-restaurant-2.jpg",
+      "/assets/images/listings/business/business-camping-restaurant-3.jpg",
+      "/assets/images/listings/business/business-camping-restaurant-4.jpg"
+    ],
+    "features": [
+      "独特露营地概念",
+      "稳定客流量",
+      "设施齐全",
+      "适合家庭聚会",
+      "交通便利"
+    ],
+    "description": "位于洛杉矶县的特色露营地餐厅，环境优美，氛围独特。餐厅拥有稳定的客流量，配备完善的餐饮设施，适合举办各类聚会活动。交通便利，周边配套完善，是一个极具潜力的餐饮投资项目。"
+  }
+]
