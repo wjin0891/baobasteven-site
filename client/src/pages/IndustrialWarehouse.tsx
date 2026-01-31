@@ -2,7 +2,7 @@ import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Building2, Warehouse, Truck, ArrowRight, MapPin, SquareFeather, DollarSign } from "lucide-react";
+import { Building2, Warehouse, Truck, ArrowRight, MapPin, Ruler, DollarSign } from "lucide-react";
 import { Link } from "wouter";
 import { useEffect, useState } from "react";
 
@@ -272,7 +272,7 @@ export default function IndustrialWarehouse() {
                   <div className="flex items-center justify-between mb-4">
                     <div className="text-2xl font-bold text-primary">{listing.price}</div>
                     <div className="flex items-center text-muted-foreground">
-                      <SquareFeather className="w-4 h-4 mr-1" />
+                      <Ruler className="w-4 h-4 mr-1" />
                       {listing.size}
                     </div>
                   </div>
