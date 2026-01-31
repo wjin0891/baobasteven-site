@@ -3,13 +3,12 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
-import { MapPin, Phone, Mail, Clock, Send, X } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 
 export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showWechatQr, setShowWechatQr] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -145,34 +144,23 @@ export default function Contact() {
             />
             <div className="absolute inset-0 bg-primary/80 flex flex-col items-center justify-center text-white p-8 text-center">
               <Clock className="w-12 h-12 mb-4 opacity-80" />
-              <h3 className="text-2xl font-bold mb-2">工作时间</h3>
+              <h3 className="text-2xl font-bold mb-2">扫码添加微信</h3>
               <p className="text-lg opacity-90 mb-6">
-                周一至周日：9:00 AM - 6:00 PM<br />
-                (其他时间请提前预约)
+                微信ID: stevenhomepage<br />
+                (扫描二维码快速咨询)
               </p>
               
-              {!showWechatQr ? (
-                <Button variant="secondary" className="font-semibold" onClick={() => setShowWechatQr(true)}>
-                  添加微信咨询
-                </Button>
-              ) : (
-                <div className="space-y-4 w-full max-w-xs">
-                  <div className="flex justify-between items-center mb-2">
-                    <h4 className="font-bold text-lg">扫码添加微信</h4>
-                    <Button variant="ghost" size="sm" className="h-8 w-8 p-0" onClick={() => setShowWechatQr(false)}>
-                      <X className="w-4 h-4" />
-                    </Button>
-                  </div>
-                  <div className="bg-white p-2 rounded-lg shadow-lg">
-                    <img 
-                      src="/assets/images/wechat-qr.jpg" 
-                      alt="WeChat QR Code" 
-                      className="w-full rounded"
-                    />
-                  </div>
-                  <p className="text-sm opacity-80">微信ID: stevenhomepage</p>
-                </div>
-              )}
+              <div className="bg-white p-3 rounded-lg shadow-lg max-w-[280px]">
+                <img 
+                  src="/assets/images/wechat-qr.jpg" 
+                  alt="WeChat QR Code" 
+                  className="w-[200px] h-[200px] object-contain rounded"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='14' fill='%23666'%3E二维码加载失败%3C/text%3E%3C/svg%3E";
+                  }}
+                />
+              </div>
             </div>
           </div>
         </div>
