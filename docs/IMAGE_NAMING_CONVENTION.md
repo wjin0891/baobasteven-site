@@ -15,8 +15,8 @@
    - `ind` - 工业仓库 (Industrial Warehouse)
    - `ret` - 办公商铺 (Office/Retail Space)
 
-2. **number**（房源编号）：3位数字，从 001 开始递增
-   - 示例：`001`, `002`, `023`, `099`
+2. **number**（房源编号）：2位数字，从 01 开始递增
+   - 示例：`01`, `02`, `22`, `99`
 
 3. **sequence**（图片序号）：1位数字，从 1 开始递增
    - 示例：`1`, `2`, `3`, `4`
@@ -25,28 +25,28 @@
    - `.jpg` 或 `.png`
 
 ### 完整示例
-- ✅ `biz-023-1.jpg` - 生意转让房源编号 023 的第 1 张图片
-- ✅ `biz-023-2.jpg` - 生意转让房源编号 023 的第 2 张图片
-- ✅ `ind-001-1.jpg` - 工业仓库房源编号 001 的第 1 张图片
-- ✅ `ret-050-3.jpg` - 办公商铺房源编号 050 的第 3 张图片
+- ✅ `biz-22-1.jpg` - 生意转让房源编号 22 的第 1 张图片
+- ✅ `biz-22-2.jpg` - 生意转让房源编号 22 的第 2 张图片
+- ✅ `ind-01-1.jpg` - 工业仓库房源编号 01 的第 1 张图片
+- ✅ `ret-50-3.jpg` - 办公商铺房源编号 50 的第 3 张图片
 
 ## 📂 目录结构
 
 ```
 client/public/assets/images/listings/
 ├── business/          # 生意转让
-│   ├── biz-023-1.jpg
-│   ├── biz-023-2.jpg
-│   ├── biz-023-3.jpg
-│   └── biz-023-4.jpg
+│   ├── biz-22-1.jpg
+│   ├── biz-22-2.jpg
+│   ├── biz-22-3.jpg
+│   └── biz-22-4.jpg
 ├── industrial/        # 工业仓库
-│   ├── ind-001-1.jpg
-│   ├── ind-001-2.jpg
-│   └── ind-002-1.jpg
+│   ├── ind-01-1.jpg
+│   ├── ind-01-2.jpg
+│   └── ind-02-1.jpg
 └── retail/           # 办公商铺
-    ├── ret-001-1.jpg
-    ├── ret-001-2.jpg
-    └── ret-002-1.jpg
+    ├── ret-01-1.jpg
+    ├── ret-01-2.jpg
+    └── ret-02-1.jpg
 ```
 
 ## 📝 JSON 引用格式
@@ -55,12 +55,12 @@ client/public/assets/images/listings/
 
 ```json
 {
-  "id": "biz-023",
+  "id": "biz-22",
   "images": [
-    "/assets/images/listings/business/biz-023-1.jpg",
-    "/assets/images/listings/business/biz-023-2.jpg",
-    "/assets/images/listings/business/biz-023-3.jpg",
-    "/assets/images/listings/business/biz-023-4.jpg"
+    "/assets/images/listings/business/biz-22-1.jpg",
+    "/assets/images/listings/business/biz-22-2.jpg",
+    "/assets/images/listings/business/biz-22-3.jpg",
+    "/assets/images/listings/business/biz-22-4.jpg"
   ]
 }
 ```
@@ -74,7 +74,7 @@ client/public/assets/images/listings/
 
 ### 标准流程
 1. **准备图片**：将图片文件命名为规范格式
-   - 示例：`biz-024-1.jpg`, `biz-024-2.jpg`
+   - 示例：`biz-24-1.jpg`, `biz-24-2.jpg`
 
 2. **放置文件**：将图片放入对应分类目录
    - 生意转让：`client/public/assets/images/listings/business/`

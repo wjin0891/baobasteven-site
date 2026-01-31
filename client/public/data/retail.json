@@ -1,6 +1,6 @@
 [
   {
-    "id": "ret-001",
+    "id": "ret-01",
     "title": "Irvine Spectrum 甲级写字楼出租",
     "type": "lease",
     "price": "$3.25/呎/月",
@@ -17,7 +17,7 @@
     "description": "位于Irvine Spectrum核心商务区的甲级写字楼，2,500呎全装修办公空间，配备高档办公家具。落地窗设计采光极佳，大楼提供24/7安保服务和免费会议中心。步行可达Irvine Spectrum购物中心和众多餐厅。"
   },
   {
-    "id": "ret-002",
+    "id": "ret-02",
     "title": "Rowland Heights 成熟商圈商铺出售",
     "type": "sale",
     "price": "$1,850,000",
@@ -34,14 +34,14 @@
     "description": "位于Rowland Heights成熟亚洲商圈的临街商铺，面积1,200呎。目前由知名奶茶店承租，剩余租期3年，年回报率约4.8%。高曝光位置，每日车流量大，适合餐饮、零售等多种业态。"
   },
   {
-    "id": "ret-003",
+    "id": "ret-03",
     "title": "Ashley 中医按摩 - 罗兰岗 + Rosemead 双店",
     "type": "sale",
     "price": "$450,000",
     "size": "1,800 呎",
     "location": "Rowland Heights & Rosemead, CA",
     "images": [
-      "/assets/images/listings/retail/ret-003-1.jpg"
+      "/assets/images/listings/retail/ret-03-1.jpg"
     ],
     "features": [
       "双店经营",
