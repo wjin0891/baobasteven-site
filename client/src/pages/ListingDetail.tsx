@@ -104,7 +104,7 @@ export default function ListingDetail() {
                       <CarouselItem key={index}>
                         <div className="aspect-video relative">
                           <img 
-                            src={`/assets/images/${img}`} 
+                            src={img} 
                             alt={`${listing.title} - Image ${index + 1}`}
                             className="w-full h-full object-cover"
                             onError={(e) => {
