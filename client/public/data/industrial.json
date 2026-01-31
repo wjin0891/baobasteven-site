@@ -6,7 +6,7 @@
     "price": "$0.85/呎/月",
     "size": "50,000 呎",
     "location": "Ontario, CA",
-    "images": [],
+    "images": ["/assets/images/industrial/ind-01-1.jpg"],
     "features": [
       "32呎净高",
       "10个卸货平台",
@@ -23,7 +23,7 @@
     "price": "$12,500,000",
     "size": "120,000 呎",
     "location": "City of Industry, CA",
-    "images": [],
+    "images": ["/assets/images/industrial/ind-02-1.jpg"],
     "features": [
       "净占地2.8英亩",
       "28呎净高",

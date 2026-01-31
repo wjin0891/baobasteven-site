@@ -6,7 +6,7 @@
     "price": "$3.25/呎/月",
     "size": "2,500 呎",
     "location": "Irvine, CA",
-    "images": [],
+    "images": ["/assets/images/retail/ret-01-1.jpg"],
     "features": [
       "全装修带家具",
       "落地窗采光极佳",
@@ -23,7 +23,7 @@
     "price": "$1,850,000",
     "size": "1,200 呎",
     "location": "Rowland Heights, CA",
-    "images": [],
+    "images": ["/assets/images/retail/ret-02-1.jpg"],
     "features": [
       "成熟亚洲商圈",
       "高曝光临街位置",
