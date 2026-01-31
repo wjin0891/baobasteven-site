@@ -1,10 +1,50 @@
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Briefcase, ShoppingBag, ArrowRight } from "lucide-react";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Briefcase, ShoppingBag, ArrowRight, MapPin, SquareFeather, DollarSign } from "lucide-react";
 import { Link } from "wouter";
+import { useEffect, useState } from "react";
+
+// 定义房源数据类型
+interface RetailListing {
+  id: string;
+  title: string;
+  type: "lease" | "sale";
+  price: string;
+  size: string;
+  location: string;
+  images: string[];
+  features: string[];
+  description: string;
+}
 
 export default function OfficeRetail() {
+  const [listings, setListings] = useState<RetailListing[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchListings = async () => {
+      try {
+        setLoading(true);
+        const response = await fetch('/data/retail.json');
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        setListings(data);
+        setError(null);
+      } catch (err) {
+        setError('加载房源数据失败，请稍后重试');
+        console.error('Error fetching listings:', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchListings();
+  }, []);
+
   return (
     <Layout>
       {/* Hero Section */}
@@ -138,6 +178,102 @@ export default function OfficeRetail() {
             </Button>
           </Link>
         </div>
+      </div>
+
+      {/* Featured Listings Section */}
+      <div className="container py-24">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <h2 className="text-3xl font-bold mb-4 text-primary">精选办公商铺房源</h2>
+          <p className="text-muted-foreground text-lg">
+            我们精心挑选的优质办公和商铺房源，满足您的各种商业需求。
+          </p>
+        </div>
+
+        {loading ? (
+          <div className="text-center py-12">
+            <div className="inline-block animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
+            <p className="mt-4 text-muted-foreground">加载中...</p>
+          </div>
+        ) : error ? (
+          <div className="text-center py-12">
+            <p className="text-red-500 mb-4">{error}</p>
+            <Button onClick={() => window.location.reload()}>重新加载</Button>
+          </div>
+        ) : listings.length === 0 ? (
+          <div className="text-center py-12 bg-muted/20 rounded-xl">
+            <p className="text-muted-foreground text-lg">暂无房源</p>
+            <p className="text-muted-foreground text-sm mt-2">请稍后再访或联系我们获取最新房源信息</p>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {listings.map((listing) => (
+              <Card key={listing.id} className="overflow-hidden hover:shadow-xl transition-all duration-300">
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src={listing.images[0] || '/assets/images/placeholder.svg'} 
+                    alt={listing.title} 
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                  />
+                  <div className="absolute top-4 left-4">
+                    <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-bold">
+                      {listing.type === 'lease' ? '出租' : '出售'}
+                    </span>
+                  </div>
+                </div>
+                <CardHeader className="pb-2">
+                  <CardTitle className="text-xl font-bold">{listing.title}</CardTitle>
+                  <div className="flex items-center text-muted-foreground text-sm mt-1">
+                    <MapPin className="w-4 h-4 mr-1" />
+                    {listing.location}
+                  </div>
+                </CardHeader>
+                <CardContent className="pt-0">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="text-2xl font-bold text-primary">{listing.price}</div>
+                    <div className="flex items-center text-muted-foreground">
+                      <SquareFeather className="w-4 h-4 mr-1" />
+                      {listing.size}
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-2 mb-4">
+                    {listing.features.slice(0, 3).map((feature, index) => (
+                      <div key={index} className="flex items-start text-sm">
+                        <div className="w-2 h-2 rounded-full bg-secondary mt-2 mr-2"></div>
+                        <span>{feature}</span>
+                      </div>
+                    ))}
+                    {listing.features.length > 3 && (
+                      <div className="text-sm text-muted-foreground">
+                        还有 {listing.features.length - 3} 个特色
+                      </div>
+                    )}
+                  </div>
+                  
+                  <div className="text-sm text-muted-foreground line-clamp-2 mb-4">
+                    {listing.description}
+                  </div>
+                  
+                  <Link href={`/listing/${listing.id}`}>
+                    <Button className="w-full">
+                      查看详情 <ArrowRight className="w-4 h-4 ml-2" />
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        )}
+
+        {!loading && listings.length > 0 && (
+          <div className="text-center mt-12">
+            <Link href="/contact">
+              <Button variant="outline" size="lg">
+                查看更多房源 <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </Link>
+          </div>
+        )}
       </div>
     </Layout>
   );
