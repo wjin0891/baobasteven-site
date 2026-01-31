@@ -13,6 +13,8 @@ import MarketInsights from "./pages/MarketInsights";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import ListingDetail from "./pages/ListingDetail";
+import IndustrialDetail from "./pages/IndustrialDetail";
+import RetailDetail from "./pages/RetailDetail";
 
 function Router() {
   return (
@@ -26,6 +28,8 @@ function Router() {
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
       <Route path="/listing/:id" component={ListingDetail} />
+      <Route path="/industrial/:id" component={IndustrialDetail} />
+      <Route path="/retail/:id" component={RetailDetail} />
       <Route path="/404" component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

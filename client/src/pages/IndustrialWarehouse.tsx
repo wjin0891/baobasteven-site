@@ -295,7 +295,7 @@ export default function IndustrialWarehouse() {
                     {listing.description}
                   </div>
                   
-                  <Link href={`/listing/${listing.id}`}>
+                  <Link href={`/industrial/${listing.id}`}>
                     <Button className="w-full">
                       查看详情 <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
