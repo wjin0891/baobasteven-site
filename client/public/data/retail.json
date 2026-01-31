@@ -38,5 +38,24 @@
       "适合多种业态"
     ],
     "description": "位于Rowland Heights成熟亚洲商圈的临街商铺，面积1,200呎。目前由知名奶茶店承租，剩余租期3年，年回报率约4.8%。高曝光位置，每日车流量大，适合餐饮、零售等多种业态。"
+  },
+  {
+    "id": "retail-003",
+    "title": "Ashley 中医按摩 - 罗兰岗 + Rosemead 双店",
+    "type": "sale",
+    "price": "$450,000",
+    "size": "1,800 呎",
+    "location": "Rowland Heights & Rosemead, CA",
+    "images": [
+      "/assets/images/listings/retail/ashley-massage-rosemead-1.jpg"
+    ],
+    "features": [
+      "双店经营",
+      "罗兰岗+Rosemead",
+      "中医按摩",
+      "客户稳定",
+      "装修精良"
+    ],
+    "description": "Ashley 中医按摩，位于罗兰岗和 Rosemead 的双店经营模式。门店装修精良，客户群体稳定。适合接手继续经营或扩展业务。"
   }
 ]
