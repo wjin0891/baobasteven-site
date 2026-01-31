@@ -1,1 +1,42 @@
-[]
+[
+  {
+    "id": "retail-001",
+    "title": "Irvine Spectrum 甲级写字楼出租",
+    "type": "lease",
+    "price": "$3.25/呎/月",
+    "size": "2,500 呎",
+    "location": "Irvine, CA",
+    "images": [
+      "/assets/images/listings/retail/retail-001-1.jpg",
+      "/assets/images/listings/retail/retail-001-2.jpg"
+    ],
+    "features": [
+      "全装修带家具",
+      "落地窗采光极佳",
+      "24/7安保服务",
+      "免费会议中心使用",
+      "步行可达购物中心"
+    ],
+    "description": "位于Irvine Spectrum核心商务区的甲级写字楼，2,500呎全装修办公空间，配备高档办公家具。落地窗设计采光极佳，大楼提供24/7安保服务和免费会议中心。步行可达Irvine Spectrum购物中心和众多餐厅。"
+  },
+  {
+    "id": "retail-002",
+    "title": "Rowland Heights 成熟商圈商铺出售",
+    "type": "sale",
+    "price": "$1,850,000",
+    "size": "1,200 呎",
+    "location": "Rowland Heights, CA",
+    "images": [
+      "/assets/images/listings/retail/retail-002-1.jpg",
+      "/assets/images/listings/retail/retail-002-2.jpg"
+    ],
+    "features": [
+      "成熟亚洲商圈",
+      "高曝光临街位置",
+      "带稳定租客",
+      "停车位充足",
+      "适合多种业态"
+    ],
+    "description": "位于Rowland Heights成熟亚洲商圈的临街商铺，面积1,200呎。目前由知名奶茶店承租，剩余租期3年，年回报率约4.8%。高曝光位置，每日车流量大，适合餐饮、零售等多种业态。"
+  }
+]
